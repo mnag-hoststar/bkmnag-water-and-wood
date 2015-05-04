@@ -1,0 +1,147 @@
+{
+	"name":"Water & Wood",
+	"thumbnail":"waterandwood.png",
+	"screenshot":"waterandwood.png",
+	"templateType":"standard",
+	"pageTypes":["home"],
+	"tags": {
+		"en": ["minimal", "clean", "photography", "color", "colorful", "modern", "website", "creative", "unique", "media", "sans-serif"]
+	},
+	"colorSwatches": {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#4f2f20",
+            "color3":"#5480a4",
+            "color4":"#204468",
+            "color5":"#7d8186",
+            "color6":"#4d6171",
+            "color7":"#c1cfd8"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#323e45",
+            "color3":"#da9d79",
+            "color4":"#633631",
+            "color5":"#7f7f7f",
+            "color6":"#804d41",
+            "color7":"#ebd6cd"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#47413b",
+            "color3":"#5498a4",
+            "color4":"#47413b",
+            "color5":"#7d8186",
+            "color6":"#4d7071",
+            "color7":"#c0d4da"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#314654",
+            "color3":"#97cc80",
+            "color4":"#314654",
+            "color5":"#7f7f7f",
+            "color6":"#6a747c",
+            "color7":"#e1eeda"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#2f3f4c",
+            "color3":"#bc97d5",
+            "color4":"#424779",
+            "color5":"#838891",
+            "color6":"#413947",
+            "color7":"#d9d3dd"
+        }
+    },
+    "fontSwatch": {
+       "title": "Raleway",
+        "font1": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "34px",
+            "font-weight": "700",
+            "line-height": "44px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "28px",
+            "font-weight": "700",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "0"
+        },
+        "font3": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "18px",
+            "font-weight": "700",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "15px",
+            "font-weight": "700",
+            "line-height": "25px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Georgia\", serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch6",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "@color-swatch2"
+         },
+        "font7": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch1",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3, 10%)"
+        },
+        "font8": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "56px",
+            "font-weight": "400",
+            "line-height": "48px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Georgia\", serif",
+            "font-size": "20px",
+            "font-weight": "400",
+            "font-style": "italic",
+            "line-height": "34px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "20px",
+            "font-weight": "700",
+            "line-height": "30px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        }
+    }
+}
