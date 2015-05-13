@@ -188,12 +188,9 @@ h6 {
 }
 
 .widget.companyname {
-	font-family:@font-swatch10-font-family;
-	font-weight: @font-swatch10-font-weight;
-	color:@font-swatch10-color;
-	line-height:@font-swatch10-line-height;
-	letter-spacing: @font-swatch10-letter-spacing;
-	font-size: @font-swatch10-font-size;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
 	a {
 		font-family:@font-swatch10-font-family;
 		font-weight: @font-swatch10-font-weight;
@@ -486,7 +483,7 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.logo {
 	display: table-cell;
-	float: left;
+	vertical-align: middle;
 	img {
 		margin-top: 3px;
 		margin-right: 11px;
@@ -553,10 +550,6 @@ input[type="search"]::-webkit-search-decoration {
 	ul li {
 		padding-bottom: 10px;
 	}
-}
-
-.widget.companyname {
-	display: table-cell;
 }
 
 //  Navigation
@@ -1206,7 +1199,6 @@ input[type="search"]::-webkit-search-decoration {
 		float: right;
 	}
 	.header-main .companyname {
-		padding-top: 0;
 	}
 	.template-nav {
 		position: relative;
@@ -1290,7 +1282,6 @@ input[type="search"]::-webkit-search-decoration {
 		padding-right: 40px;
 	}
 	.widget.companyname a {
-		line-height: 25px;
 	}
 	.template-nav {
 		width: 100%;
