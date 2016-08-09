@@ -1,7 +1,7 @@
 {
 	"name":"Water & Wood",
-	"thumbnail":"waterandwood.png",
-	"screenshot":"waterandwood.png",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"waterwood-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes":["home"],
 	"tags": {
