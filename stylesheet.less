@@ -199,6 +199,22 @@ h6 {
 	}
 }
 
+h1, h2, h3, h4, h5, h6,
+[class*="contentgroup__h"],
+.blog-post-title a {
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
 .widget.companyname {
     display: table-cell;
     vertical-align: middle;
@@ -214,37 +230,80 @@ h6 {
 }
 
 p,
+ul, ol, li,
+label,
+.contentgroup__body,
 .contactform label, 
 .advancedcontactform label,
 .twitter ul li a,
 .twitter ul li time,
 .signupform label,
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-select {
+select,
+blockquote {
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
 	color:@font-swatch5-color;
 	line-height:@font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
+
+	.style--light & {
+        color: fade(@contrast--light, 75%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 75%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 75%);
+    }
+}
+
+blockquote:before {
+	.style--light & {
+        color: fade(@contrast--light, 50%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 50%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 50%);
+    }
 }
 
 a,
 .widget.twitter a,
 .widget.twitter ul li a,
 .widget.twitter ul li span a,
-.ecom-productlist-info h2 a {
+.ecom-productlist-info h2 a,
+[data-name="content"] a:not(.contentgroup__link) {
 	text-decoration: none;
 	color: @color-swatch4;
+
+	.style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+
 	&:hover {
 		text-decoration: underline;
 	}
 }
 
-.twitter ul li {
-	span > a, time, .twitter-content > span {
-		opacity: 0.7;
-	}
+.twitter ul li span > a, time,
+.twitter-content > span {
+	opacity: 0.7;
 }
 
 .contactform button, .contactform button.btn, 
@@ -266,7 +325,8 @@ button.btn,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
 .widget.ecomcheckout table tr td .checkout-quantitybtn button,
 .widget.ecomcheckout .checkout-order-button,
-.basket-summary-empty-cta {
+.basket-summary-empty-cta,
+a.contentgroup__link {
 	border: 0;
 	margin: 0;
 	cursor: pointer;
@@ -285,9 +345,37 @@ button.btn,
 	-ms-transition: .2s;
 	transition: .2s;
 	border-radius: 2px;
+
+	.style--light & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		text-decoration: none;
+
+		.style--light & {
+			background-color: darken(@color--accent, 8%);
+		}
+
+		.style--accent & {
+			background-color: darken(@color--dark, 8%);
+		}
+
+		.style--dark & {
+			background-color: darken(@color--accent, 8%);
+		}
 	}
 }
 
@@ -328,10 +416,6 @@ button.btn,
 	}
 }
 
-.header-feature {
-	margin-bottom: -20px;
-}
-
 .widget.logo {
 	display: table-cell;
 	vertical-align: middle;
@@ -347,7 +431,6 @@ button.btn,
 
 .widget.feature {
 	clear: both;
-	margin-bottom: -20px;
 	text-align: center;
 	h2, h3 {
 		span {
@@ -978,9 +1061,40 @@ button.btn,
 	border-radius: 100%;
 	border: 1px solid @color-swatch2;
 	background-color: @color-swatch1;
+
+	.style--light & {
+		border-color: @color--dark;
+    	background-color: @color--light;
+    }
+
+    .style--accent & {
+    	border-color: @color--dark;
+        background-color: @color--accent;
+    }
+
+    .style--dark & {
+    	border-color: @color--accent;
+        background-color: @color--dark;
+    }
+
 	&.selected {
 		border: 1px solid @color-swatch2;
 		background: @color-swatch2;
+
+		.style--light & {
+			border-color: @color--dark;
+        	background-color: @color--dark;
+	    }
+
+	    .style--accent & {
+	    	border-color: @color--dark;
+	        background-color: @color--dark;
+	    }
+
+	    .style--dark & {
+	    	border-color: @color--accent;
+	        background-color: @color--accent;
+	    }
 	}
 }
 
@@ -1028,6 +1142,25 @@ button.btn,
 }
 
 /* ===============================
+   Divider
+   =============================== */
+
+hr.line {
+
+	.style--light & {
+        background-color: darken(@color--light, 12%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 12%);
+    }
+
+    .style--dark & {
+        background-color: lighten(@color--dark, 15%);
+    }
+}
+
+/* ===============================
     Forms
     ============================== */
 
@@ -1067,9 +1200,40 @@ textarea,
 	background-color: @color-swatch1;
 	border-radius: 2px;
 	-webkit-appearance: none;
+
+	.style--light & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 20%);
+    }
+
+    .style--accent & {
+    	background-color: @color--light;
+    	border-color: darken(@color--accent, 20%);
+    }
+
+    .style--dark & {
+    	background-color: @color--light;
+    	border-color: darken(@color--dark, 20%);
+    }
+
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
 		background-color: @color-swatch1;
+
+		.style--light & {
+			background-color: @color--light;
+			border-color: darken(@color--light, 25%);
+	    }
+
+	    .style--accent & {
+	    	background-color: @color--light;
+	    	border-color: darken(@color--accent, 25%);
+	    }
+
+	    .style--dark & {
+	    	background-color: @color--light;
+	    	border-color: darken(@color--dark, 25%);
+	    }
 	}
 }
 
@@ -1132,7 +1296,7 @@ select {
 	background-image: image('/images/arrow-down.png');
 	background-repeat: no-repeat;
 	background-position: right 12px center;
-	background-position-x: 95%;
+	background-position-x: ~"calc(100% - 15px)";
 	background-position-y: 53%;
 	margin-bottom: 12px;
 	padding-right: 33px;
@@ -1197,10 +1361,8 @@ input[type="search"]::-webkit-search-decoration {
     Social Icons
     ============================== */
 
-.widget.socialicons {
-	span {
-		display: inline-block;
-	}
+.widget.socialicons span {
+	display: inline-block;
 }
 
 .basket-summary-empty-cta,
@@ -1214,7 +1376,6 @@ input[type="search"]::-webkit-search-decoration {
 	padding: 0;
 }
 
-button:disabled,
 button.btn:disabled:hover,
 .widget.ecomcheckout .checkout-order-button:disabled {
 	background-color: @borders-blocks;
@@ -1289,23 +1450,64 @@ button.btn:disabled:hover,
 	margin-left: 0;
 }
 
-.ecom-productslist-products {
-	margin-left: -1.33%;
-	clear: both;
-	zoom: 1;
+.widget.ecomproductslist .ecom-productslist-products,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap {
+	margin-left: 0;
+	max-width: 100%;
 }
 
 .widget.ecomproductslist {
 	margin-left: 0;
-	float: left;
 }
 
 .widget.ecomproductslist .ecom-productslist-image-wrap,
-.ecom-featuredproducts-image-wrap {
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
 	border: 1px solid @borders-blocks;
+
+	.style--light & {
+    	background-color: @color--light;
+    	border-color: darken(@color--light, 15%);
+    }
+
+    .style--accent & {
+        background-color: @color--accent;
+        border-color: darken(@color--accent, 15%);
+    }
+
+    .style--dark & {
+        background-color: @color--dark;
+        border-color: darken(@color--dark, 15%);
+    }
+
 	&:hover {
 		border-color: darken(@borders-blocks, 10%);
+
+		.style--light & {
+	    	background-color: @color--light;
+	    	border-color: darken(@color--light, 20%);
+	    }
+
+	    .style--accent & {
+	        background-color: @color--accent;
+	        border-color: darken(@color--accent, 20%);
+	    }
+
+	    .style--dark & {
+	        background-color: @color--dark;
+	        border-color: darken(@color--dark, 20%);
+	    }
 	}
+}
+
+.widget.ecomproductslist .ecom-productslist-image {
+	max-height: 250px;
+	object-fit: contain;
+}
+
+.widget.ecomproductslist .productlist-pagination {
+	clear: both;
+	float: none;
+	width: 100%;
 }
 
 .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn {
@@ -1395,7 +1597,6 @@ button.btn:disabled:hover,
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
-	/* border: 1px solid @borders-blocks; */
 	max-height: 400px;
 	img {
 		max-width: 100%;
@@ -1634,7 +1835,7 @@ button.btn:disabled:hover,
 	.widget.feature .feature-bgimg .content, .widget.feature .feature-bgimg {
 		height: 400px;
 	}
-	.row {
+	.grid-row {
 		padding-top: 10px;
 	}
 	.ecom-productslist-products {

@@ -3,6 +3,7 @@
 	"thumbnail":"thumbnail.png",
 	"screenshot":"waterwood-screenshot.jpg",
 	"templateType":"standard",
+    "versionTenCompatible": 1,
 	"pageTypes":["home"],
 	"tags": {
 		"en": ["minimal", "clean", "photography", "color", "colorful", "modern", "website", "creative", "unique", "media", "sans-serif"]
@@ -10,9 +11,9 @@
 	"colorSwatches": {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#4f2f20",
+            "color2":"#6f554a",
             "color3":"#5480a4",
-            "color4":"#204468",
+            "color4":"#13375b",
             "color5":"#7d8186",
             "color6":"#4d6171",
             "color7":"#c1cfd8"

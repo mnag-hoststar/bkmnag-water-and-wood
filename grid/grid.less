@@ -74,7 +74,7 @@
 	margin: 0 auto;
 }
 
-.row {
+.grid-row {
 	margin-left: -@gutter;
 	clear: both;
 	zoom: 1;
@@ -96,7 +96,7 @@ img { max-width: 100%; height: auto; }
 
 
 // IE & Browser Fixes
-[class*="span-"], .container, .row { zoom: 1; }
+[class*="span-"], .container, .grid-row { zoom: 1; }
 
 img { width: auto~"\9"; }
 
@@ -115,7 +115,7 @@ img { width: auto~"\9"; }
 		&[class*="shift-"] { margin-left: 0; }
 	}
 
-	.row { margin: 0 @gutter; }
-	.row .row { margin: 0; }
+	.grid-row { margin: 0 @gutter; }
+	.grid-row .grid-row { margin: 0; }
 	.container { width: 100%; }
 }
