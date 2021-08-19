@@ -1623,6 +1623,7 @@ button.btn:disabled:hover,
 .widget.ecombasket {
 	display: inline-block;
 	clear: both;
+
 	.ecombasket-pull {
 		width: auto;
 		padding: 0;
@@ -1634,18 +1635,22 @@ button.btn:disabled:hover,
 	    -moz-transition: .2s;
     	-ms-transition: .2s;
 	    transition: .2s;
+		
 		&:hover {
 			background-color: @font-swatch7-background-color-hover;
 		}
+
 		p {
 			display: inline-block;
 			color: @color-swatch1;
 			padding: 14px 50px 15px 20px;
 		}
+
 		.basket-count {
 			color: @color-swatch1;
 		}
  	}
+	
 	.ecombasket-list-container ul li {
 		border-bottom: 1px solid @borders-blocks;
 	}
@@ -1664,6 +1669,7 @@ button.btn:disabled:hover,
 
 .widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
 	max-height: 400px;
+
 	img {
 		max-width: 100%;
 	}
@@ -1702,11 +1708,13 @@ button.btn:disabled:hover,
 			-moz-transition: .2s;
 			-ms-transition: .2s;
 			transition: .2s;
+
 			&:hover {
 				border-color: darken(@borders-blocks, 10%);
 			}
 		}
 	}
+
 	.ecom-productlist-price {
 		float: right;
 		font-family: @font-swatch7-font-family;
@@ -1732,25 +1740,31 @@ button.btn:disabled:hover,
 .basket-summary-items-table {
 	border-collapse: collapse;
 	width: 100%;
+
 	.image-wrap {
 		background-position: 10000px;
 		line-height: 0;
 		text-align: center;
 		padding: 30px;
+
 		img {
 			max-width: 100%;
 			max-height: 200px;
 		}
 	}
+
 	td {
 		padding: 10px 0;
 	}
+
 	tr {
 		border-bottom: solid 1px darken(@color-swatch1, 10%);
+
 		&:last-of-type {
 			border-bottom: none;
 		}
 	}
+
 	.basket-summary-subtotal {
 		padding: 20px;
 	}
@@ -1789,6 +1803,7 @@ button.btn:disabled:hover,
 
 .template-footer .widget.profile .bk-profile-socialicons span {
 	margin-right: 5px;
+
 	a, a:hover {
 		background-color: transparent;
 		margin: 0;
@@ -1796,9 +1811,8 @@ button.btn:disabled:hover,
 }
 
 .template-footer {
-	/* padding-top: 30px;
-	padding-bottom: 30px; */
 	color: @color-swatch1;
+
 	a, h3, p, .twitter ul li a, .twitter ul li time, .signupform label {
 		color: @color-swatch1;
 	}
@@ -1829,6 +1843,7 @@ button.btn:disabled:hover,
 }
 
 // Tablet
+
 @media @tablet {
 	.header-logo {
 		padding-top: 10px;
@@ -1852,8 +1867,6 @@ button.btn:disabled:hover,
 	.template-nav {
 		width: 50%;
 		float: right;
-	}
-	.header-main .companyname {
 	}
 	.template-nav {
 		position: relative;
@@ -1920,21 +1933,19 @@ button.btn:disabled:hover,
 			width: 100%;
 		}
 	}
+
 	.header-title {
 		width: 100%;
 	}
+
 	.widget.companyname {
 		padding-right: 40px;
 	}
-	.widget.companyname a {
-	}
+
 	.template-nav {
 		width: 100%;
 		padding-bottom: 10px;
 	}
-	/*.widget .extendednavigation a.pull {
-		top: 0;
-	}*/
 
 	.widget.ecomproductslist {
 		.ecom-productslist-product {
@@ -1946,14 +1957,17 @@ button.btn:disabled:hover,
 		width: 100%;
 		padding-bottom: 100%;
 	}
+
 	.basket-summary-items-table {
 		td, .basket-summary-subtotal {
 			padding: 10px;
 		}
+
 		.image-wrap {
 			padding: 0;
 		}
 	}
+
 	.basket-summary-items-table {
 		td, th {
 			float: left;
@@ -1961,19 +1975,24 @@ button.btn:disabled:hover,
 			padding: 0 0 5px;
 		}
 	}
+
 	.basket-summary-items-table .image-wrap {
 		padding-top: 5px;
 	}
+
 	.basket-summary-amount-column,
 	.basket-summary-details-column {
 		display: none;
 	}
+
 	.basket-summary-items-column {
 		text-align: left;
 	}
+
 	.basket-summary-amount {
 		text-align: right;
 	}
+
 	.basket-summary-subtotal {
 		padding: 0 0 10px;
 		text-align: left;
