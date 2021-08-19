@@ -208,6 +208,8 @@ h6 {
 h1, h2, h3, h4, h5, h6,
 [class*="contentgroup__h"],
 .blog-post-title a {
+    word-break: break-word;
+
     .style--light & {
         color: @contrast--light;
     }
@@ -253,6 +255,7 @@ blockquote {
 	line-height:@font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
+	word-break: break-word;
 
 	.style--light & {
         color: fade(@contrast--light, 75%);
