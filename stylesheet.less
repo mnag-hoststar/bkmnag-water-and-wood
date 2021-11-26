@@ -1436,6 +1436,10 @@ button.btn:disabled:hover,
 				@media @mobile {
 					width: 100%;
 				}
+					
+				.responsivecolumns & {
+					width: 100%;
+				}
 
                 label {
                     display: block;
@@ -1455,10 +1459,19 @@ button.btn:disabled:hover,
 							width: 100%;
 							margin-bottom: 10px;
 						}
+					
+						.responsivecolumns & {
+							width: 100%;
+							margin-bottom: 10px;
+						}
                     }
 				
 					.btn {
 						@media @mobile {
+							width: 100%;
+						}
+
+						.responsivecolumns & {
 							width: 100%;
 						}
 					}
