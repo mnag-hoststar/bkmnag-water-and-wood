@@ -1383,6 +1383,49 @@ button.btn:disabled:hover,
 
 // Blog
 
+.widget.signupform,
+.blog-search-form {
+	.form-group {
+		display: flex;
+		flex-wrap: wrap;
+
+		label {
+			display: block;
+			width: 100%;
+
+			@media @mobile {
+				width: 100%;
+			}
+					
+			.responsivecolumns & {
+				width: 100%;
+			}
+		}
+
+		input {
+			flex-grow: 1;
+
+			.responsivecolumns & {
+				margin-bottom: 10px;
+			}
+		}
+
+		.blog-search-submit-button {
+			margin: 0 0 0 10px;
+
+			@media @mobile {
+				margin: 0;
+				width: 100%;
+			}
+					
+			.responsivecolumns & {
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
 .blog-post-feature-image-wrap {
 	height: 400px;
 	margin-bottom: 10px;
