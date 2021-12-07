@@ -1503,14 +1503,17 @@ button.btn:disabled:hover,
 		
 					input {
 						flex-grow: 1;
+						margin-right: 10px;
 					
 						@media @mobile {
 							width: 100%;
+							margin-right: 0;
 							margin-bottom: 10px;
 						}
 					
 						.responsivecolumns & {
 							width: 100%;
+							margin-right: 0;
 							margin-bottom: 10px;
 						}
                     }
@@ -1529,6 +1532,10 @@ button.btn:disabled:hover,
 		}
 	}
 
+	.productlist-item-count {
+		padding: 0 10px 10px;
+	}
+
 	.ecom-productslist-product {
 		margin-right: 0;
 		zoom: 1;
@@ -1536,6 +1543,18 @@ button.btn:disabled:hover,
 		max-width: 100%;
 		width: 100%/3;
 		padding: 10px;
+
+		@media @tablet {
+			width: 100%/2;
+		}
+
+		@media @mobile {
+			width: 100%;
+		}
+
+		.responsivecolumns & {
+			width: 100%;
+		}
 	}
 }
 
@@ -1550,6 +1569,7 @@ button.btn:disabled:hover,
 .widget.ecomproductslist .ecom-productslist-image-wrap,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
 	border: 1px solid @borders-blocks;
+	background-position: center;
 
 	.style--light & {
     	background-color: @color--light;
@@ -1653,9 +1673,6 @@ button.btn:disabled:hover,
 		color: @font-swatch7-color;
 		background-color: @color-swatch3;
 		border-radius: 2px;
-		-webkit-transition: .2s;
-	    -moz-transition: .2s;
-    	-ms-transition: .2s;
 	    transition: .2s;
 		
 		&:hover {
@@ -1709,13 +1726,12 @@ button.btn:disabled:hover,
 .ecom-productlist-info {
 	display: flex;
 	justify-content: space-between;
-	min-height: 100px;
 	padding-top: 20px;
 
 	h2 {
 		display: inline-block;
 		padding-right: 20px;
-		line-height:bkscale(@font-swatch3-line-height, 0.9);
+		line-height: bkscale(@font-swatch3-line-height, 0.9);
 		font-size: bkscale(@font-swatch3-font-size, 0.9);
 		word-break: break-word;
 
