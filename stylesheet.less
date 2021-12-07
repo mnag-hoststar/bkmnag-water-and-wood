@@ -1834,7 +1834,15 @@ button.btn:disabled:hover,
 .footer-wrap {
 	clear: both;
 	background: @color-swatch4;
-	padding: 30px 40px;
+	padding: 30px;
+
+	@media @tablet {
+		padding: 30px 40px;
+	}
+
+	@media @mobile {
+		padding: 30px;
+	}
 }
 
 .template-footer .widget.profile .bk-profile-socialicons span {
