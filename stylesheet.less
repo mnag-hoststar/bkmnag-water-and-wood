@@ -2,6 +2,8 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 @import "@{templateLocal}/grid/grid.less";
 
+@mobile-small: ~"only screen and (max-width: 380px)";
+
 // Mixins
 
 @borders-blocks: darken(@color-swatch1, 10%);
@@ -789,7 +791,7 @@ button.btn,
 		text-overflow: ellipsis;
 		
 		.language-selector--flag-text& {
-			@media only screen and (max-width: 380px) {
+			@media @mobile-small {
 				display: none;
 			}
 		}
