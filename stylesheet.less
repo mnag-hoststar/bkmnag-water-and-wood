@@ -31,6 +31,8 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 }
 
+// Typography
+
 h1 {
 	font-family:@font-swatch1-font-family; 
 	font-weight: @font-swatch1-font-weight; 
@@ -258,6 +260,8 @@ a,
 	opacity: 0.7;
 }
 
+// Button
+
 .contactform button,
 .contactform button.btn, 
 .advancedcontactform button,
@@ -401,6 +405,8 @@ button.btn,
 .keyline {
 	border-bottom: 1px solid darken(@color-swatch1, 5%);
 }
+
+// Feature
 
 .widget.feature {
 	clear: both;
@@ -830,35 +836,42 @@ button.btn,
 	}
 }
 
+.widget.navigation,
 .widget .extendednavigation {
 	.clearfix;
 
-	ul li {
-		@media @tablet {
-			border-bottom: none;
-		}
-	
-		&:hover ul {
-			top: 54px;
-			left: 0;
-			background-color: darken(@color-swatch1, 5%);
-	
-			li {
-				padding: 8px 20px;
-			}
-		}
+	ul {
+		padding-left: 0;
 
-		.text,
-		&.folder .text {
-			padding: 0;
-			display: inline;
-			text-transform: uppercase;
-		}
-	
-		a:hover,
-		&.folder > .text:hover {
-			padding-bottom: 4px;
-			border-bottom: 3px solid lighten(@color-swatch7, 10%);
+		li {
+			list-style: none;
+
+			@media @tablet {
+				border-bottom: none;
+			}
+		
+			&:hover ul {
+				top: 54px;
+				left: 0;
+				background-color: darken(@color-swatch1, 5%);
+		
+				li {
+					padding: 8px 20px;
+				}
+			}
+
+			.text,
+			&.folder .text {
+				padding: 0;
+				display: inline;
+				text-transform: uppercase;
+			}
+		
+			a:hover,
+			&.folder > .text:hover {
+				padding-bottom: 4px;
+				border-bottom: 3px solid lighten(@color-swatch7, 10%);
+			}
 		}
 	}
 
@@ -927,6 +940,27 @@ button.btn,
 				box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
 			}
 		}
+	}
+}
+
+// Company Name
+
+.widget.companyname {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+
+	@media @mobile {
+		padding-right: 40px;
+	}
+
+	a {
+		font-family:@font-swatch10-font-family;
+		font-weight: @font-swatch10-font-weight;
+		line-height:@font-swatch10-line-height;
+		letter-spacing: @font-swatch10-letter-spacing;
+		font-size: @font-swatch10-font-size;
+		color:@font-swatch10-color;
 	}
 }
 
@@ -1417,8 +1451,25 @@ input[type="search"]::-webkit-search-decoration {
 	display: flex;
 
 	label {
-		label;
+        font-family:@font-swatch5-font-family;
+        font-size:@font-swatch5-font-size;
+        font-weight:@font-swatch5-font-weight;
+        line-height:@font-swatch5-line-height;
+        color:@font-swatch5-color;
+        letter-spacing: @font-swatch5-letter-spacing;
 		word-break: break-word;
+    
+        .style--light & {
+            color: @contrast--light;
+        }
+    
+        .style--accent & {
+            color: @contrast--accent;
+        }
+    
+        .style--dark & {
+            color: @contrast--dark;
+        }
 	}
 }
 
@@ -1557,38 +1608,40 @@ button.btn:disabled:hover,
 	}
 }
 
-.blog-post-feature-image-wrap {
-	height: 400px;
-	margin-bottom: 10px;
+.blog-search-form {
+	.blog-post-feature-image-wrap {
+		height: 400px;
+		margin-bottom: 10px;
 
-	@media @tablet {
-	    height: 300px;
+		@media @tablet {
+			height: 300px;
+		}
+
+		@media @mobile {
+			height: 200px;
+		}
 	}
 
-	@media @mobile {
-	    height: 200px;
+	.blog-post-metadata {
+		padding: 12px 18px 14px;
+		margin: 15px 0;
 	}
-}
 
-.blog-post-metadata {
-	padding: 12px 18px 14px;
-	margin: 15px 0;
-}
-
-.blog-post-item {
-	padding-bottom: 30px;
-}
-
-.blog-search-form button {
-	margin: 11px 10px;
-	
-	@media @mobile {
-		margin: 11px 0px;
+	.blog-post-item {
+		padding-bottom: 30px;
 	}
-}
 
-.blog-post-sharing .btn {
-	margin: 10px 0;
+	.blog-post-sharing .btn {
+		margin: 10px 0;
+	}
+
+	.blog-search-form button {
+		margin: 11px 10px;
+		
+		@media @mobile {
+			margin: 11px 0px;
+		}
+	}
 }
 
 // E-COMMERCE
