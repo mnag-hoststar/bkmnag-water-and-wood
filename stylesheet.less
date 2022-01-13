@@ -2397,16 +2397,33 @@ button.btn:disabled:hover,
 
 // Product
 
-.widget.ecomproduct .ecom-product {
-	.btn.ecom-product-add-to-cart-btn {
-		margin-bottom: 20px;
+.widget.ecomproduct {
+	.ecom-product {
+		.btn.ecom-product-add-to-cart-btn {
+			margin-bottom: 20px;
+		}
+		
+		.ecom-product-preview-image-wrap {
+			max-height: 400px;
+		
+			img {
+				max-width: 100%;
+			}
+		}
 	}
-	
-	.ecom-product-preview-image-wrap {
-		max-height: 400px;
-	
-		img {
-			max-width: 100%;
+
+	.product-actions {
+		button {
+			margin-bottom: 1em;
+			text-align: center;
+        
+			@media @mobile {
+				width: 100%;
+			}
+
+			&:before {
+				float: none;
+			}
 		}
 	}
 }
