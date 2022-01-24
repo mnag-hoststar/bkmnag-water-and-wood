@@ -1191,86 +1191,7 @@ button.btn,
 .widget .extendednavigation {
 	.clearfix;
 
-	ul {
-		padding-left: 0;
-
-		li {
-			list-style: none;
-
-			@media @tablet {
-				border-bottom: none;
-			}
-		
-			&:hover ul {
-				top: 54px;
-				left: 0;
-				background-color: darken(@color-swatch1, 5%);
-		
-				li {
-					padding: 8px 20px;
-				}
-			}
-
-			.text,
-			&.folder .text {
-				padding: 0;
-				display: inline;
-				text-transform: uppercase;
-			}
-		
-			a:hover,
-			&.folder > .text:hover {
-				padding-bottom: 4px;
-				border-bottom: 3px solid lighten(@color-swatch7, 10%);
-			}
-		}
-	}
-
-	> ul > li {
-		padding: 14px 20px 15px;
-
-		a,
-		&.folder > .text {
-			display: inline;
-			padding: 0;
-			border-bottom: 3px solid transparent;
-			transition: .2s;
-		}
-
-		&.folder {
-			padding-right: 30px;
-			margin-right: 0;
-
-			&:after {
-				right: 12px;
-				top: 46%;
-			}
-		}
-	}
-
-	> ul > li,
-	> ul > li.folder {
-		@media @tablet {
-			padding: 4px 20px;
-			border-bottom: none;
-		}
-
-		&.folder:after {
-			@media @tablet {
-				right: 5px;
-				top: 47%;
-			}
-		}
-
-		&:hover ul {
-			@media @tablet {
-				top: 30px;
-				left: auto;
-				right: 0;
-				margin: 0;
-			}
-		}
-	}
+	// Mobile Menu
 
 	a.pull {
 		@media @tablet {
@@ -1289,6 +1210,110 @@ button.btn,
 				top: 8px;
 				background-color: @color-swatch2;
 				box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+			}
+		}
+	}
+
+	// Menu Points
+
+	ul {
+		padding-left: 0;
+
+		// Menu Point
+
+		li {
+			list-style: none;
+			padding: 14px 20px 15px;
+
+			@media @tablet {
+				padding: 4px 20px;
+				border-bottom: none;
+			}
+
+			.text,
+			&.folder .text {
+				padding: 0;
+				display: inline;
+				text-transform: uppercase;
+			}
+	
+			a,
+			&.folder > .text {
+				display: inline;
+				padding: 0;
+				border-bottom: 3px solid transparent;
+				transition: .2s;
+
+				&:hover {
+					padding-bottom: 4px;
+					border-bottom: 3px solid lighten(@color-swatch7, 10%);
+				}
+			}
+
+			// Folder
+
+			&.folder {
+				padding-right: 30px;
+				margin-right: 0;
+
+				&:after {
+					right: 12px;
+					top: 46%;
+				}
+					
+				> .text {
+					// Folder Arrow
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 50%;
+						right: 0.5em;
+						border: 2px solid fade(@font-swatch6-color, 60%);
+						border-top: transparent;
+						border-left: transparent;
+						transform: rotate(45deg);
+						margin-top: -0.5em;
+						width: 0.5em;
+						height: 0.5em;
+					}
+				
+					&:hover:after {
+						border-color: @font-swatch6-color-hover;
+					}
+				}
+
+				// Dropdown
+	
+				> ul,
+				&:hover > ul {
+					top: 54px;
+					left: 0;
+					background-color: darken(@color-swatch1, 5%);
+
+					@media @tablet {
+						top: 30px;
+						left: auto;
+						right: 0;
+						margin: 0;
+					}
+			
+					li {
+						padding: 8px 20px;
+					}
+				}
+	
+				// Folder Open
+		
+				&.folder-open ul,
+				&.folder-open:hover ul {
+					display: block;
+	
+					@media @tablet {
+						display: block;
+					}
+				}
 			}
 		}
 	}
