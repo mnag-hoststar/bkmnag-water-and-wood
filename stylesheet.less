@@ -1682,23 +1682,11 @@ form button {
 input,
 textarea,
 select,
-.contactform input,
-.contactform textarea,
-.signupform fieldset input,
-.signupform fieldset input.email,
-.advancedcontactform input,
-.advancedcontactform textarea,
-.userregistration fieldset input,
-.widget.profile form fieldset input,
-.blogsearch input.blog-search-input,
-.productlist-filter .productlist-search input,
-.widget input[type="text"],
-.widget input[type="email"],
-.widget input[type="search"],
+form input,
+form textarea,
+form select,
 input:-webkit-autofill,
-input:-webkit-autofill:focus,
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-.widget.ecomcheckout .delivery select {
+input:-webkit-autofill:focus {
 	text-indent: 0;
 	padding: 8px 9px 10px;
 	border: 1px solid @borders-blocks;
@@ -1749,9 +1737,6 @@ input:-webkit-autofill:focus,
 }
 
 .widget.profile form fieldset input,
-input[type=email],
-input[type=text],
-input[type=search],
 .signupform fieldset input {
 	height: 40px;
 	vertical-align: middle;
