@@ -1,23 +1,16 @@
 {# Copyright 2014 BaseKit Platform Ltd #}
 <!doctype html>
 <html lang="{{ page.seoLang }}">
-
 	<head>
 		{% include "head.twig" %}
-		
 		{% include basekit.headScript %}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	</head>
-
 	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}" {{ isV10sSite ? 'id="migrated"' : '' }}>
-
 		{% block content %}
 		{% endblock %}
+		{% include "footer.twig" %}
 
-			{% include "footer.twig" %}
-			
-		</div>
-
-		
 		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {
@@ -28,6 +21,5 @@
 		</script>
 
 		{% include basekit.bodyScript %}
-
 	</body>
 </html>
