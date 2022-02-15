@@ -17,6 +17,27 @@
     appearance: @appearance;
 }
 
+// Basekit Elements
+
+.top-level-overlay button.top-level-overlay__delete-button,
+.row-overlay__delete-button,
+.top-level-overlay button.top-level-overlay__arrangement-button--up,
+.row-overlay__arrangement-button--up,
+.top-level-overlay button.top-level-overlay__arrangement-button--down,
+.row-overlay__arrangement-button--down, .row-overlay__edit-button {
+	background: transparent !important;
+}
+
+.row-overlay__edit-button {
+	background: #fff !important;
+}
+
+.is-dropdown-open .row-overlay__edit-button .row-overlay__edit-button-icon,
+.is-setting-open .row-overlay__edit-button .row-overlay__edit-button-icon {
+	left: auto !important;
+    top: auto !important;
+}
+
 // Globals
 
 html, body {
@@ -1397,72 +1418,6 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
 	}
 }
 
-// Menu
-
-.menu .menu-item-image-wrap,
-.blog-post-feature-image-wrap {
-	height: 200px;
-	background-size: cover;
-	background-position: center;
-
-	img {
-		display: none;
-	}
-}
-
-.menu {
-	.menu-subsection {
-		border: 1px solid @borders-blocks;
-		padding: 0;
-
-		&:before,
-		&:after {
-			@media @tablet {
-				display: none;
-			}
-		}
-	}
-
-	.menu-item h3 {
-		color: @color-swatch2;
-	}
-	
-	.menu-items li {
-		padding: 0;
-		margin-bottom: 30px;
-	}
-
-	.menu-item-description {
-		padding-bottom: 10px;
-	}
-}
-
-.menu-subsection-promoted,
-.menu-item-promoted,
-.blog-post-metadata {
-	background-color: @background-blocks;
-}
-
-.menu-item-promoted .inner-item,
-.menu-subsection-wrapper {
-	padding: 20px;
-}
-
-.menu .menu-section-item-dietary-props .dietary-icon,
-.menu .menu-info .dietary-icon,
-.dietary-icon {
-	background-color: @color-swatch1;
-	opacity: 0.7;
-	border: 1px solid darken(@background-blocks, 10%);
-	margin-right: 7px;
-	padding: 0 4px;
-	border-radius: 2px;
-}
-
-.standard-price {
-	color: @color-swatch2;
-}
-
 // Content
 
 .widget.content {
@@ -1851,15 +1806,18 @@ textarea {
 
 .select-wrap {
 	position: relative;
-	max-width: 50%;
 
-	@media @mobile {
-		max-width: 100%;
-	}
+    .advancedcontactform & {
+        max-width: 50%;
 
-	.responsivecolumns & {
-		max-width: 100%;
-	}
+        @media @tablet {
+            max-width: 100%;
+        }
+    
+        .responsivecolumns & {
+            max-width: 100%;
+        }
+    }
 }
 
 select {
