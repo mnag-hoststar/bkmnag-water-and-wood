@@ -131,36 +131,36 @@ h4, .heading--4 {
 
 h5, .heading--5,
 .ecom-product-price {
-	font-family:@font-swatch5-font-family;
+	font-family: @font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
-	color:@font-swatch5-color;
-	line-height:@font-swatch5-line-height;
+	color: @font-swatch5-color;
+	line-height: @font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
 
 	a {
-		font-family:@font-swatch5-font-family;
+		font-family: @font-swatch5-font-family;
 		font-weight: @font-swatch5-font-weight;
-		line-height:@font-swatch5-line-height;
+		line-height: @font-swatch5-line-height;
 		letter-spacing: @font-swatch5-letter-spacing;
 		font-size: @font-swatch5-font-size;
 		color: @color-swatch2;
 	}
 }
 
-h6, .heading--1 {
-	font-family:@font-swatch6-font-family;
+h6, .heading--6 {
+	font-family: @font-swatch6-font-family;
 	font-weight: @font-swatch6-font-weight;
-	color:@font-swatch6-color;
-	line-height:@font-swatch6-line-height;
+	color: @font-swatch6-color;
+	line-height: @font-swatch6-line-height;
 	letter-spacing: @font-swatch6-letter-spacing;
 	font-size: @font-swatch6-font-size;
 	color: @color-swatch5;
 
 	a {
-		font-family:@font-swatch6-font-family;
+		font-family: @font-swatch6-font-family;
 		font-weight: @font-swatch6-font-weight;
-		line-height:@font-swatch6-line-height;
+		line-height: @font-swatch6-line-height;
 		letter-spacing: @font-swatch6-letter-spacing;
 		font-size: @font-swatch6-font-size;
 		color: @color-swatch2;
@@ -188,7 +188,6 @@ p,
 ul, ol, li,
 dd, pre, code,
 label, .label,
-.contentgroup__body,
 .contactform label, 
 .advancedcontactform label,
 .twitter ul li time,
@@ -387,8 +386,7 @@ blockquote {
 
 table {
 	overflow: auto;
-	width: 100%;
-	max-width: 100%;
+	min-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -480,12 +478,16 @@ td {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	.responsivecolumns & {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	&:first-child {
@@ -1135,6 +1137,8 @@ body {
 
 						.text,
 						&:hover .text {
+							overflow: visible;
+							word-break: break-word;
 							padding: 0;
 						}
 
@@ -1956,10 +1960,12 @@ form.blog-search-form .form-group button,
 	font-family: @font-swatch7-font-family;
 	font-weight: @font-swatch7-font-weight;
 	-webkit-font-smoothing: antialiased;
+	text-align: center;
 	color: @font-swatch7-color;
 	line-height: @font-swatch7-line-height;
 	letter-spacing: @font-swatch7-letter-spacing;
 	font-size: @font-swatch7-font-size;
+	height: auto !important;
 	padding: 8px 20px;
 	-webkit-transition: .2s;
 	-moz-transition: .2s;
@@ -2069,6 +2075,17 @@ form.blog-search-form .form-group button,
 	padding-left: 3.2em;
     background-size: 1.2em;
     background-position: 1.25em center;
+}
+
+.widget.filedownload div {
+	@media @mobile {
+		float: none;
+	}
+
+	span.file-name {
+		display: block;
+		margin: 0.5em 0;
+	}
 }
 
 // Social Icons
@@ -2642,29 +2659,31 @@ form.blog-search-form .form-group button,
 		}
 	}
 
-	.ecom-product-tag,
-	.ecom-product-category {
-		display: flex;
-		flex-wrap: wrap;
+	.ecom-product-cattag {
+		.ecom-product-tag,
+		.ecom-product-category {
+			display: flex;
+			flex-wrap: wrap;
 
-		&:after {
-			content: ':\00a0';
-			order: 0;
-			display: inline-block;
-		}
-	}
-
-	.store-category-link,
-	.ecom-product-tag-link {
-		font-weight: 300;
-        order: 1;
-
-		&:after {
-			content: ',\00a0';
+			&:after {
+				content: ':\00a0';
+				order: 0;
+				display: inline-block;
+			}
 		}
 
-		&:last-child::after {
-			content: none;
+		.store-category-link,
+		.ecom-product-tag-link {
+			font-weight: 300;
+			order: 1;
+
+			&:after {
+				content: ',\00a0';
+			}
+
+			&:last-child::after {
+				content: none;
+			}
 		}
 	}
 }
