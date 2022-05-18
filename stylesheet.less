@@ -935,7 +935,7 @@ body {
 	align-items: center;
 	position: relative;
 
-	@media @mobile {
+	@media @tablet {
     	margin-top: 0;
 	}
 
@@ -1113,12 +1113,13 @@ body {
 					text-overflow: inherit;
 
 					@media @tablet {
-						position: static;
 						display: none;
+						position: static;
+						max-width: none;
+						min-width: auto;
 						margin: 0;
 						padding: 0;
 						max-width: 100%;
-						min-width: auto;
 					}
 				
 					> li {
@@ -1720,8 +1721,10 @@ input:-webkit-autofill:focus {
 	}
 }
 
-textarea {
+textarea,
+form textarea {
 	resize: vertical;
+	min-height: 100px;
 }
 
 // DROPDOWN
@@ -2113,15 +2116,14 @@ form.blog-search-form .form-group button,
 		display: inline-block;
 		
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			display: inline-block;
 			background-image: none;
 			margin: 0 5px 10px;
 			padding: 0;
 			width: 45px;
 			height: 45px;
 			min-height: 45px;
+			line-height: 45px;
 			border-radius: 50%;
 			text-indent: 0;
 			font-size: 0;
