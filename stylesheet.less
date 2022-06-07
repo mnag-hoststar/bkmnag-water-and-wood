@@ -2376,12 +2376,11 @@ form.blog-search-form .form-group button,
 
 .widget.ecomcategorieslist {
 	ul.product-category-items {
-		list-style: none;
-		padding: 0 10px;
-		margin: 0 auto 1em;
 		display: flex;
-		max-width: 800px;
 		flex-wrap: wrap;
+		margin: 0 0 1em;
+		padding: 0;
+		list-style: none;
 
 		@media @mobile {
 			padding: 0;
@@ -2440,6 +2439,7 @@ form.blog-search-form .form-group button,
 	.productlist-filter {
 		flex-grow: 1;
 		margin-left: 0;
+		width: 100%;
 
 		.productlist-display-form {
 			display: flex;
@@ -2475,7 +2475,7 @@ form.blog-search-form .form-group button,
 				&.productlist-search {
 					display: flex;
 					flex-wrap: wrap;
-					width: auto;
+					width: 100%;
 		
 					input {
 						flex-grow: 1;
