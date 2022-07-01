@@ -3,8 +3,8 @@
 <html lang="{{ page.seoLang }}">
 	<head>
 		{% include "head.twig" %}
-		{% include basekit.headScript %}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		{% include basekit.headScript %}
 	</head>
 	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}" {{ isV10sSite ? 'id="migrated"' : '' }}>
 		{% block content %}
