@@ -2683,6 +2683,37 @@ a.blog-back-home {
 				max-width: 100%;
 			}
 		}
+
+		.ecom-product-cattag {
+			.ecom-product-tag,
+			.ecom-product-category {
+				display: flex;
+				flex-wrap: wrap;
+	
+				&:after {
+					content: ':\00a0';
+					order: 0;
+					display: inline-block;
+				}
+			}
+	
+			.store-category-link,
+			.ecom-product-tag-link {
+				display: inline-block;
+				word-break: break-word;
+				line-height: 1.4em;
+				font-weight: 300;
+				order: 1;
+	
+				&:after {
+					content: ',\00a0';
+				}
+	
+				&:last-child::after {
+					content: none;
+				}
+			}
+		}
 	}
 
 	.product-actions {
@@ -2696,34 +2727,6 @@ a.blog-back-home {
 
 			&:before {
 				float: none;
-			}
-		}
-	}
-
-	.ecom-product-cattag {
-		.ecom-product-tag,
-		.ecom-product-category {
-			display: flex;
-			flex-wrap: wrap;
-
-			&:after {
-				content: ':\00a0';
-				order: 0;
-				display: inline-block;
-			}
-		}
-
-		.store-category-link,
-		.ecom-product-tag-link {
-			font-weight: 300;
-			order: 1;
-
-			&:after {
-				content: ',\00a0';
-			}
-
-			&:last-child::after {
-				content: none;
 			}
 		}
 	}
